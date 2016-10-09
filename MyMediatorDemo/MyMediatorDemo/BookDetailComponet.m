@@ -11,7 +11,7 @@
 
 @implementation BookDetailComponet
 
-+(UIViewController *)DetailViewController:(NSDictionary *)bookInfo
+-(UIViewController *)DetailViewController:(NSDictionary *)bookInfo
 {
     BookDetailViewController *bookVC = [[BookDetailViewController alloc] init];
     

@@ -11,8 +11,10 @@
 
 @interface MyMediator : NSObject
 
-+(UIViewController *)BookDetailComponet_ViewController:(NSDictionary *)bookInfo;
++(instancetype)shareInstance;
 
-+(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID;
+-(UIViewController *)BookDetailComponet_ViewController:(NSDictionary *)bookInfo;
+
+-(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID;
 
 @end

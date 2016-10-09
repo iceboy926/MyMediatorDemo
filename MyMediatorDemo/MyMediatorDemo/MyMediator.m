@@ -7,20 +7,83 @@
 //
 
 #import "MyMediator.h"
-#import "BookDetailComponet.h"
-#import "BookReviewComponet.h"
+
 
 @implementation MyMediator
 
 
-+(UIViewController *)BookDetailComponet_ViewController:(NSDictionary *)bookInfo
++(instancetype)shareInstance
 {
-    return [BookDetailComponet DetailViewController:bookInfo];
+    static MyMediator *myMediator = nil;
+    static dispatch_once_t once_t;
+    dispatch_once(&once_t, ^{
+        if(myMediator == nil)
+        {
+            myMediator = [[MyMediator alloc] init];
+            
+        }
+    });
+
+    return myMediator;
 }
 
-+(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)paramDic
 {
-    return [BookReviewComponet ReviewController:bookID];
+    NSString *targetClassString = [NSString stringWithFormat:@"%@", targetName];
+    NSString *actionString = [NSString stringWithFormat:@"%@:", actionName];
+    
+    Class targetClass = NSClassFromString(targetClassString);
+    id target = [[targetClass alloc] init];
+    SEL action = NSSelectorFromString(actionString);
+    
+    if (target == nil) {
+        // 这里是处理无响应请求的地方之一，这个demo做得比较简单，如果没有可以响应的target，就直接return了。实际开发过程中是可以事先给一个固定的target专门用于在这个时候顶上，然后处理这种请求的
+        return nil;
+    }
+    
+    if ([target respondsToSelector:action]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        return [target performSelector:action withObject:paramDic];
+#pragma clang diagnostic pop
+    } else {
+        // 这里是处理无响应请求的地方，如果无响应，则尝试调用对应target的notFound方法统一处理
+        SEL action = NSSelectorFromString(@"notFound:");
+        if ([target respondsToSelector:action]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            return [target performSelector:action withObject:paramDic];
+#pragma clang diagnostic pop
+        } else {
+            // 这里也是处理无响应请求的地方，在notFound都没有的时候，这个demo是直接return了。实际开发过程中，可以用前面提到的固定的target顶上的。
+            return nil;
+        }
+    }
+
+}
+
+-(UIViewController *)BookDetailComponet_ViewController:(NSDictionary *)bookInfo
+{
+    
+    UIViewController *viewController = [self performTarget:@"BookDetailComponet"
+                                                    action:@"DetailViewController"
+                                                    params:@{@"key":@"value"}];
+    if ([viewController isKindOfClass:[UIViewController class]]) {
+        // view controller 交付出去之后，可以由外界选择是push还是present
+        return viewController;
+    } else {
+        // 这里处理异常场景，具体如何处理取决于产品
+        return [[UIViewController alloc] init];
+    }
+
+    
+}
+
+-(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID
+{
+    UIViewController *vc = nil;
+    
+    return vc;
 }
 
 @end

@@ -11,6 +11,6 @@
 
 @interface BookDetailComponet : NSObject
 
-+(UIViewController *)DetailViewController:(NSDictionary *)bookInfo;
+-(UIViewController *)DetailViewController:(NSDictionary *)bookInfo;
 
 @end

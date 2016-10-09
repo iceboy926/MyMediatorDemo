@@ -61,14 +61,13 @@ NSString const *kCellIdentifier = @"CellIdentifier";
     
     if([indexPath row] == 0)
     {
-        UIViewController *view = [MyMediator BookDetailComponet_ViewController:nil];
-        [self.navigationController pushViewController:view animated:YES];
+        UIViewController *vc = [[MyMediator shareInstance] BookDetailComponet_ViewController:nil];
+        
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if([indexPath row] == 1)
     {
-        UIViewController *view = [MyMediator BookReviewComponet_ViewController:@"十年"];
         
-        [self.navigationController pushViewController:view animated:YES];
     }
     else
     {

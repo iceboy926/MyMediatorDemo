@@ -11,6 +11,6 @@
 
 @interface BookReviewComponet : NSObject
 
-+(UIViewController *)ReviewController:(NSString *)bookID;
+-(UIViewController *)ReviewController:(NSString *)bookID;
 
 @end

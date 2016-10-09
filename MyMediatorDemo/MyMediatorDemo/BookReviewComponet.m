@@ -11,7 +11,7 @@
 
 @implementation BookReviewComponet
 
-+(UIViewController *)ReviewController:(NSString *)bookID
+-(UIViewController *)ReviewController:(NSString *)bookID
 {
     BookReviewViewController *reviewVC = [[BookReviewViewController alloc] init];
     
