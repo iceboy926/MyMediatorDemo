@@ -18,6 +18,7 @@
 		10F1E99D1DAA2B63009FA490 /* MyMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E99C1DAA2B63009FA490 /* MyMediator.m */; };
 		10F1E9A41DAA2CA2009FA490 /* BookDetailComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A31DAA2CA2009FA490 /* BookDetailComponet.m */; };
 		10F1E9A71DAA2CC6009FA490 /* BookReviewComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A61DAA2CC6009FA490 /* BookReviewComponet.m */; };
+		10F1E9AA1DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		10F1E9A31DAA2CA2009FA490 /* BookDetailComponet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailComponet.m; sourceTree = "<group>"; };
 		10F1E9A51DAA2CC6009FA490 /* BookReviewComponet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReviewComponet.h; sourceTree = "<group>"; };
 		10F1E9A61DAA2CC6009FA490 /* BookReviewComponet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReviewComponet.m; sourceTree = "<group>"; };
+		10F1E9A81DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyMediator+MyMediatorBookDetail.h"; sourceTree = "<group>"; };
+		10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyMediator+MyMediatorBookDetail.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 			children = (
 				10F1E99B1DAA2B63009FA490 /* MyMediator.h */,
 				10F1E99C1DAA2B63009FA490 /* MyMediator.m */,
+				10F1E9AB1DAA39AF009FA490 /* Catagories */,
 			);
 			name = Mediator;
 			sourceTree = "<group>";
@@ -134,6 +138,15 @@
 				10F1E9A61DAA2CC6009FA490 /* BookReviewComponet.m */,
 			);
 			name = BookReviewComponet;
+			sourceTree = "<group>";
+		};
+		10F1E9AB1DAA39AF009FA490 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				10F1E9A81DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.h */,
+				10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */,
+			);
+			name = Catagories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +227,7 @@
 				10F1E9A41DAA2CA2009FA490 /* BookDetailComponet.m in Sources */,
 				10F1E9971DAA2A9F009FA490 /* BookDetailViewController.m in Sources */,
 				10F1E9941DAA28AF009FA490 /* MainTableViewController.m in Sources */,
+				10F1E9AA1DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 
 #import "MainTableViewController.h"
-#import "MyMediator.h"
+#import "MyMediator+MyMediatorBookDetail.h"
 
 NSString const *kCellIdentifier = @"CellIdentifier";
 

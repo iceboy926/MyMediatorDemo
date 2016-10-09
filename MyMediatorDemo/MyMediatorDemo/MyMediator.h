@@ -13,8 +13,6 @@
 
 +(instancetype)shareInstance;
 
--(UIViewController *)BookDetailComponet_ViewController:(NSDictionary *)bookInfo;
-
--(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID;
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)paramDic;
 
 @end
