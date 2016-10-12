@@ -19,6 +19,7 @@
 		10F1E9A41DAA2CA2009FA490 /* BookDetailComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A31DAA2CA2009FA490 /* BookDetailComponet.m */; };
 		10F1E9A71DAA2CC6009FA490 /* BookReviewComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A61DAA2CC6009FA490 /* BookReviewComponet.m */; };
 		10F1E9AA1DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */; };
+		10F1E9B41DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F1E9B31DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		10F1E9A61DAA2CC6009FA490 /* BookReviewComponet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReviewComponet.m; sourceTree = "<group>"; };
 		10F1E9A81DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyMediator+MyMediatorBookDetail.h"; sourceTree = "<group>"; };
 		10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyMediator+MyMediatorBookDetail.m"; sourceTree = "<group>"; };
+		10F1E9B21DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyMediator+MyMediatorBookReview.h"; sourceTree = "<group>"; };
+		10F1E9B31DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyMediator+MyMediatorBookReview.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +146,28 @@
 		10F1E9AB1DAA39AF009FA490 /* Catagories */ = {
 			isa = PBXGroup;
 			children = (
+				10F1E9B61DAB6F32009FA490 /* BookReview */,
+				10F1E9B51DAB6F25009FA490 /* BookDetail */,
+			);
+			name = Catagories;
+			sourceTree = "<group>";
+		};
+		10F1E9B51DAB6F25009FA490 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
 				10F1E9A81DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.h */,
 				10F1E9A91DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m */,
 			);
-			name = Catagories;
+			name = BookDetail;
+			sourceTree = "<group>";
+		};
+		10F1E9B61DAB6F32009FA490 /* BookReview */ = {
+			isa = PBXGroup;
+			children = (
+				10F1E9B21DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.h */,
+				10F1E9B31DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.m */,
+			);
+			name = BookReview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +248,7 @@
 				10F1E9A41DAA2CA2009FA490 /* BookDetailComponet.m in Sources */,
 				10F1E9971DAA2A9F009FA490 /* BookDetailViewController.m in Sources */,
 				10F1E9941DAA28AF009FA490 /* MainTableViewController.m in Sources */,
+				10F1E9B41DAB6F1F009FA490 /* MyMediator+MyMediatorBookReview.m in Sources */,
 				10F1E9AA1DAA39A8009FA490 /* MyMediator+MyMediatorBookDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyMediatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mit.MyMediatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyMediatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mit.MyMediatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,6 +400,7 @@
 				10F1E9911DAA2782009FA490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

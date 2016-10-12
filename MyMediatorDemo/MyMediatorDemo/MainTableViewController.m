@@ -9,6 +9,7 @@
 
 #import "MainTableViewController.h"
 #import "MyMediator+MyMediatorBookDetail.h"
+#import "MyMediator+MyMediatorBookReview.h"
 
 NSString const *kCellIdentifier = @"CellIdentifier";
 
@@ -67,7 +68,8 @@ NSString const *kCellIdentifier = @"CellIdentifier";
     }
     else if([indexPath row] == 1)
     {
-        
+        UIViewController *vc = [[MyMediator shareInstance] BookReviewComponet_ViewController:@"let things go with wind"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else
     {
@@ -79,7 +81,7 @@ NSString const *kCellIdentifier = @"CellIdentifier";
 - (NSArray *)dataSource
 {
     if (_dataSource == nil) {
-        _dataSource = @[@"push BookDetail controller", @"push Review controller"];
+        _dataSource = @[@"push BookDetail controller", @"push BookReview controller"];
     }
     return _dataSource;
 }
