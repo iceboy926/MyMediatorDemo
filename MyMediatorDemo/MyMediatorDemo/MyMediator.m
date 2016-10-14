@@ -62,13 +62,4 @@
 
 }
 
-
-
--(UIViewController *)BookReviewComponet_ViewController:(NSString *)bookID
-{
-    UIViewController *vc = nil;
-    
-    return vc;
-}
-
 @end
